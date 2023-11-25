@@ -163,9 +163,9 @@ export default defineConfig({
 })
 ```
 ## 可能存在的其他问题
-1. 插件 `vite-plugin-qiankun`在生产模式下依旧不支持`publicPath`, 需要将`vite.config.js`中`base`配置写死。导致多环境部署不便捷。无法像在`webpack`结合`window.INJECTED_PUBLIC_PATH_BY_QIANKUN + publicpath`来解决。（未验证）
+1. 插件 `vite-plugin-qiankun`在生产模式下依旧不支持`publicPath`, 需要将`vite.config.js`中`base`配置写死。导致多环境部署不便捷。无法像在`webpack`结合`window.INJECTED_PUBLIC_PATH_BY_QIANKUN + publicpath`来解决。（未验证）  
 ![](https://cdn.jsdelivr.net/gh/HelloAllenW/BlogAssets@latest/images/2023/image3.png)
 2. 关于`vue3 + vite + typescript`项目中出现 `“Error: The package "@esbuild/win32-x64" could not be found, and is needed by esbuild.”` 的错误。
-![](https://cdn.jsdelivr.net/gh/HelloAllenW/BlogAssets@latest/images/2023/image4.png)
+![](https://cdn.jsdelivr.net/gh/HelloAllenW/BlogAssets@latest/images/2023/image4.png)  
 在运行`dev`之前先运行`node node_modules/esbuild/install.js`命令来解决`esbuild`安装问题。然后再启动项目，发现已经能正常运行。
 
