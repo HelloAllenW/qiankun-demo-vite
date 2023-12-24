@@ -24,7 +24,7 @@ const initQianKun = () => {
 
 const render = (container) => {
   // 如果是在主应用的环境下就挂载主应用的节点，否则挂载到本地
-  const appDom = container ? container : document.getElementById('root')
+  const appDom = container ? container.querySelector("#root") : document.getElementById('root')
   ReactDOM.createRoot(appDom).render(
     <React.StrictMode>
       <App />
